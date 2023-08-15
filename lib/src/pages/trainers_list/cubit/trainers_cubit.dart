@@ -8,7 +8,6 @@ import 'package:flutter_http_test/src/service/http_request.dart';
 
 part 'trainers_state.dart';
 
-const _top7news = 'https://lenta.ru/rss/top7';
 
 const String apiAdress = 'sok.tomskneft.ru';
 const String apiLogin = 'MobileClient';
@@ -38,7 +37,7 @@ class NewsCubit extends Cubit<NewsState> {
       //final newTrainer = Trainer.fromJson(finalJson);
       emit(TrainersLoadedState(trainers));
     } catch (e) {
-      emit(TrainersErrorState('Owibka!!!!!!'));
+      emit(TrainersErrorState('Ошибка загрузки'));
     }
   }
 
